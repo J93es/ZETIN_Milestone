@@ -1,0 +1,28 @@
+.yearOptionBtn {
+  width: 120px;
+  height: 40px;
+}
+
+.wrap-cont {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+.wrap-item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.wrap-info {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.more-cont {
+  display: none;
+}
+
+.more-btn {
+  width: 80px;
+  height: 40px;
+}
