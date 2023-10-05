@@ -19,11 +19,9 @@ function Cont(props) {
 
   useEffect(() => {
     return () => {
-      if (!isSelectAllYear && expended) {
-        handleExpended(!expended);
-      }
+      handleExpended(false);
     };
-  }, [isSelectAllYear, expended]);
+  }, [isSelectAllYear]);
 
   return (
     <ul className="each-cont">
