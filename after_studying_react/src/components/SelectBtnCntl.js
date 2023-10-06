@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import FormSelect from "react-bootstrap/FormSelect";
 
 function SelectBtnCntl(props) {
   const { conts, onChange, value } = props;
@@ -13,14 +12,14 @@ function SelectBtnCntl(props) {
   const yearOptList = useMemo(() => getYearOptList(conts), [conts]);
 
   return (
-    <FormSelect
+    <select
       name="yearOption"
       className="yearOptionBtn"
       onChange={handleSelect}
       value={value}
     >
       {yearOptList}
-    </FormSelect>
+    </select>
   );
 }
 
