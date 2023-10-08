@@ -7,10 +7,10 @@ import "./App.css";
 function App(props) {
   const conts = [
     {
-      year: 2023,
+      year: "2023년",
       items: [
         {
-          month: 12,
+          month: "12월",
           infoes: [
             {
               title: "title23-12-1",
@@ -27,7 +27,7 @@ function App(props) {
           ],
         },
         {
-          month: 11,
+          month: "11월",
           infoes: [
             {
               title: "title23-11-1",
@@ -44,7 +44,7 @@ function App(props) {
           ],
         },
         {
-          month: 10,
+          month: "10월",
           infoes: [
             {
               title: "title23-10-1",
@@ -64,10 +64,10 @@ function App(props) {
     },
 
     {
-      year: 2022,
+      year: "2022년",
       items: [
         {
-          month: 12,
+          month: "12월",
           infoes: [
             {
               title: "title22-12-1",
@@ -84,7 +84,7 @@ function App(props) {
           ],
         },
         {
-          month: 11,
+          month: "11월",
           infoes: [
             {
               title: "title22-11-1",
@@ -101,7 +101,7 @@ function App(props) {
           ],
         },
         {
-          month: 10,
+          month: "10월",
           infoes: [
             {
               title: "title22-10-1",
@@ -121,10 +121,10 @@ function App(props) {
     },
 
     {
-      year: 2021,
+      year: "2021년",
       items: [
         {
-          month: 12,
+          month: "12월",
           infoes: [
             {
               title: "title21-12-1",
@@ -141,7 +141,7 @@ function App(props) {
           ],
         },
         {
-          month: 11,
+          month: "11월",
           infoes: [
             {
               title: "title21-11-1",
@@ -158,7 +158,7 @@ function App(props) {
           ],
         },
         {
-          month: 10,
+          month: "10월",
           infoes: [
             {
               title: "title21-10-1",
@@ -178,8 +178,8 @@ function App(props) {
     },
   ];
 
+  const defaultCount = 1;
   const [selected, setSelect] = useState("all-year");
-
   const isSelectAllYear = selected === "all-year";
 
   return (
@@ -190,6 +190,7 @@ function App(props) {
         conts={conts}
         selected={selected}
         isSelectAllYear={isSelectAllYear}
+        defaultCount={defaultCount}
       />
     </div>
   );

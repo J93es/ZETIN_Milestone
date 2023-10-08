@@ -33,7 +33,7 @@ function getYearOptList(conts) {
   for (let i = 0; i < conts.length; i++) {
     yearOptList.push(
       <option value={conts[i].year} key={i + 1}>
-        {conts[i].year}년
+        {conts[i].year}
       </option>
     );
   }

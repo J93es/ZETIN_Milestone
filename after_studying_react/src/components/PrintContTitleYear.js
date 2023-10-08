@@ -3,7 +3,7 @@ function PrintContTitleYear(props) {
 
   return (
     <div className="cont-title-year">
-      <strong>{year}년</strong>
+      <strong>{year}</strong>
     </div>
   );
 }

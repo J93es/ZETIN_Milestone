@@ -13,8 +13,15 @@ function Cont(props) {
   );
 
   const moreBtn = useMemo(
-    () => getMoreBtn(isSelectAllYear, expended, handleExpended),
-    [isSelectAllYear, expended]
+    () =>
+      getMoreBtn(
+        isSelectAllYear,
+        expended,
+        defaultCount,
+        cont.items.length,
+        handleExpended
+      ),
+    [expended, isSelectAllYear, defaultCount, cont]
   );
 
   useEffect(() => {
@@ -24,7 +31,7 @@ function Cont(props) {
   }, [isSelectAllYear]);
 
   return (
-    <ul className="each-cont">
+    <ul>
       <div className="wrap-cont">
         <PrintContTitleYear year={cont.year} />
 
@@ -40,26 +47,55 @@ function Cont(props) {
 
 function getItemList(expended, isSelectAllYear, defaultCount, cont) {
   const itemList = [];
-  const showLen =
-    !expended && isSelectAllYear ? defaultCount : cont.items.length;
+
+  const showLen = getShowLen(
+    expended,
+    isSelectAllYear,
+    defaultCount,
+    cont.items.length
+  );
 
   for (let i = 0; i < showLen; i++) {
     itemList.push(<Item item={cont.items[i]} key={i} />);
   }
+
   return itemList;
 }
 
-function getMoreBtn(isSelectAllYear, expended, handleExpended) {
-  const moreBtn = isSelectAllYear ? (
+function getShowLen(expended, isSelectAllYear, defaultCount, itemsLength) {
+  if (!isSelectAllYear) {
+    return itemsLength;
+  }
+  if (expended) {
+    return itemsLength;
+  }
+  if (defaultCount > itemsLength) {
+    return itemsLength;
+  }
+
+  return defaultCount;
+}
+
+function getMoreBtn(
+  isSelectAllYear,
+  expended,
+  defaultCount,
+  itemsLength,
+  handleExpended
+) {
+  if (!isSelectAllYear) {
+    return [];
+  }
+  if (defaultCount > itemsLength) {
+    return [];
+  }
+
+  return (
     <MoreBtnCntl
       expended={expended}
       onClick={() => handleExpended(!expended)}
     />
-  ) : (
-    []
   );
-
-  return moreBtn;
 }
 
 export default Cont;
