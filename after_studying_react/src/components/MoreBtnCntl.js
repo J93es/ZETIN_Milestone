@@ -1,4 +1,5 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./Css/MoreBtnCntl.css";
+import { Button } from "react-bootstrap";
 
 const MoreBtnCntl = (props) => {
   const { expended, onClick } = props;
@@ -9,15 +10,22 @@ const MoreBtnCntl = (props) => {
     }
   };
 
-  return (
-    <button className="more-btn" type="button" onClick={handleClick}>
-      {expended ? (
-        <span className="btn-title">숨기기</span>
-      ) : (
-        <span className="btn-title">더보기</span>
-      )}
-    </button>
-  );
+  if (expended) {
+    return getMoreBtn("숨기기", handleClick);
+  }
+
+  return getMoreBtn("더보기", handleClick);
 };
+
+function getMoreBtn(status, handleClick) {
+  return (
+    <div className="wrap-item">
+      <div />
+      <Button type="button" className="btn btn-info" onClick={handleClick}>
+        <span className="btn-title">{status}</span>
+      </Button>
+    </div>
+  );
+}
 
 export default MoreBtnCntl;

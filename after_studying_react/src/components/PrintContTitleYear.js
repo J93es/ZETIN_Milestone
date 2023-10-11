@@ -1,3 +1,5 @@
+import "./Css/PrintContTitleYear.css";
+
 function PrintContTitleYear(props) {
   const { year } = props;
 

@@ -1,33 +1,25 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Item from "./Item.js";
 import MoreBtnCntl from "./MoreBtnCntl.js";
 import PrintContTitleYear from "./PrintContTitleYear.js";
+import "./Css/Cont.css";
 
 function Cont(props) {
   const { cont, defaultCount, isSelectAllYear } = props;
-  const [expended, handleExpended] = useState(false);
+  const [expended, setExpended] = useState(false);
 
-  const itemList = useMemo(
-    () => getItemList(expended, isSelectAllYear, defaultCount, cont),
-    [expended, isSelectAllYear, defaultCount, cont]
-  );
+  const itemList = getItemList(expended, isSelectAllYear, defaultCount, cont);
 
-  const moreBtn = useMemo(
-    () =>
-      getMoreBtn(
-        isSelectAllYear,
-        expended,
-        defaultCount,
-        cont.items.length,
-        handleExpended
-      ),
-    [expended, isSelectAllYear, defaultCount, cont]
+  const moreBtn = getMoreBtn(
+    isSelectAllYear,
+    expended,
+    defaultCount,
+    cont.items.length,
+    setExpended
   );
 
   useEffect(() => {
-    return () => {
-      handleExpended(false);
-    };
+    setExpended(false);
   }, [isSelectAllYear]);
 
   return (
@@ -86,7 +78,7 @@ function getMoreBtn(
   if (!isSelectAllYear) {
     return [];
   }
-  if (defaultCount > itemsLength) {
+  if (defaultCount >= itemsLength) {
     return [];
   }
 

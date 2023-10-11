@@ -1,26 +1,16 @@
-import { useMemo } from "react";
+import PrintInfoTitle from "./PrintInfoTitle.js";
+import PrintInfoText from "./PrintInfoText.js";
+import "./Css/Info.css";
 
 function Info(props) {
   const { info } = props;
-  const infoTextList = useMemo(() => getInfoTextList(info), [info]);
 
   return (
     <div className="wrap-info">
-      <div className="info-title">{info.title}</div>
-
-      <div className="info-text">{infoTextList}</div>
+      <PrintInfoTitle info={info} />
+      <PrintInfoText info={info} />
     </div>
   );
-}
-
-function getInfoTextList(info) {
-  const infoTextList = [];
-
-  for (let i = 0; i < info.text.length; i++) {
-    infoTextList.push(<div key={i}>{info.text[i]}</div>);
-  }
-
-  return infoTextList;
 }
 
 export default Info;

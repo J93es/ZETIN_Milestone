@@ -1,10 +1,10 @@
-import { useMemo } from "react";
 import Info from "./Info.js";
 import PrintItemTitleMonth from "./PrintItemTitleMonth.js";
+import "./Css/Item.css";
 
 function Item(props) {
   const { item } = props;
-  const infoList = useMemo(() => getInfoList(item), [item]);
+  const infoList = getInfoList(item);
 
   return (
     <div className="wrap-item">

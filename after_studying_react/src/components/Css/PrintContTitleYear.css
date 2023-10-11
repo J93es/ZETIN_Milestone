@@ -1,0 +1,10 @@
+.cont-title-year {
+  font-size: 18px;
+  font-family: "Apple SD Gothic Neo,Malgun Gothic", "맑은 고딕", "sans-serif";
+}
+
+.cont-title-year:first-of-type {
+  @media (max-width: 850px) {
+    margin-bottom: 7px;
+  }
+}

@@ -1,3 +1,5 @@
+import "./Css/PrintItemTitleMonth.css";
+
 function PrintItemTitleMonth(props) {
   const { month } = props;
 

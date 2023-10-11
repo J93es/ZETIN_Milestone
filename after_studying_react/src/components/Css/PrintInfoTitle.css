@@ -1,0 +1,20 @@
+.area-info-title {
+  margin-bottom: 5px;
+  background-color: rgb(166, 246, 255);
+  border-radius: 10px;
+  @media (max-width: 689px) {
+    max-width: 330px;
+    margin-bottom: 10px;
+  }
+}
+
+.wrap-info-title {
+  padding: 10px;
+}
+
+.info-title {
+  word-wrap: break-word;
+  font-size: 16px;
+  font-weight: 625;
+  font-family: "Apple SD Gothic Neo,Malgun Gothic", "맑은 고딕", "sans-serif";
+}

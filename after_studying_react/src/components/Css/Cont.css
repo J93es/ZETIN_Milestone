@@ -1,0 +1,7 @@
+.wrap-cont {
+  margin-bottom: 100px;
+  @media (min-width: 850px) {
+    display: grid;
+    grid-template-columns: 100px 730px;
+  }
+}

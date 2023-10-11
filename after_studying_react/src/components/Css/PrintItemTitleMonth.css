@@ -1,0 +1,12 @@
+.item-title-month {
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  font-family: "Apple SD Gothic Neo,Malgun Gothic", "맑은 고딕", "sans-serif";
+}
+
+.item-title-month:first-of-type {
+  @media (max-width: 850px) {
+    margin-bottom: 7px;
+  }
+}

@@ -1,13 +1,10 @@
-import { useMemo } from "react";
 import Cont from "./Cont.js";
+import "./Css/MilestoneWindow.css";
 
-function Window(props) {
+function MilestoneWindow(props) {
   const { selected, conts, isSelectAllYear, defaultCount } = props;
 
-  const contList = useMemo(
-    () => getContList(selected, conts, isSelectAllYear, defaultCount),
-    [selected, conts, isSelectAllYear, defaultCount]
-  );
+  const contList = getContList(selected, conts, isSelectAllYear, defaultCount);
 
   return <div className="area-cont">{contList}</div>;
 }
@@ -42,4 +39,4 @@ function isContMustShow(isSelectAllYear, selected, cont) {
   return false;
 }
 
-export default Window;
+export default MilestoneWindow;

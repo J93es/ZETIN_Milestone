@@ -1,0 +1,6 @@
+.wrap-info {
+  @media (min-width: 690px) {
+    display: grid;
+    grid-template-columns: 330px 330px;
+  }
+}
