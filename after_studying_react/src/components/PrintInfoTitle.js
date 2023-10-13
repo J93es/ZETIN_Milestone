@@ -1,16 +1,16 @@
 import "./Css/PrintInfoTitle.css";
 
-function PrintInfoTitle(props) {
-  const { info } = props;
-  const infoTitleList = getInfoTitlesList(info);
+export default function PrintInfoTitle({ info }) {
+  const infoTitleList = getInfoTitleList(info);
 
   return <div className="area-info-title">{infoTitleList}</div>;
 }
 
-function getInfoTitlesList(info) {
+function getInfoTitleList(info) {
   if (info.titles.length === 0) {
     return getInfoTitle("", -1);
   }
+
   const infotitleList = [];
 
   for (let i = 0; i < info.titles.length; i++) {
@@ -27,5 +27,3 @@ function getInfoTitle(string, key) {
     </div>
   );
 }
-
-export default PrintInfoTitle;

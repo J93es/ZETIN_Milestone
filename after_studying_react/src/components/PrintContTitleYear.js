@@ -1,13 +1,9 @@
 import "./Css/PrintContTitleYear.css";
 
-function PrintContTitleYear(props) {
-  const { year } = props;
-
+export default function PrintContTitleYear({ year }) {
   return (
     <div className="cont-title-year">
       <strong>{year}</strong>
     </div>
   );
 }
-
-export default PrintContTitleYear;

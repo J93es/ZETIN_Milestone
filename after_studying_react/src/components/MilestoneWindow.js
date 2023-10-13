@@ -1,9 +1,12 @@
 import Cont from "./Cont.js";
 import "./Css/MilestoneWindow.css";
 
-function MilestoneWindow(props) {
-  const { selected, conts, isSelectAllYear, defaultCount } = props;
-
+export default function MilestoneWindow({
+  selected,
+  conts,
+  isSelectAllYear,
+  defaultCount,
+}) {
   const contList = getContList(selected, conts, isSelectAllYear, defaultCount);
 
   return <div className="area-cont">{contList}</div>;
@@ -38,5 +41,3 @@ function isContMustShow(isSelectAllYear, selected, cont) {
 
   return false;
 }
-
-export default MilestoneWindow;

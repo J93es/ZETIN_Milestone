@@ -1,7 +1,6 @@
 import "./Css/PrintInfoText.css";
 
-function PrintPrintInfoText(props) {
-  const { info } = props;
+export default function PrintPrintInfoText({ info }) {
   const infoTextList = getInfoTextList(info);
 
   return <div className="area-info-text">{infoTextList}</div>;
@@ -27,5 +26,3 @@ function getInfoText(string, key) {
     </div>
   );
 }
-
-export default PrintPrintInfoText;

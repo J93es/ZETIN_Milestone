@@ -4,12 +4,12 @@ import YearSelectBtnCntl from "./YearSelectBtnCntl.js";
 import "./Css/Milestone.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function Milestone(props) {
+export default function Milestone(props) {
   const conts = getConts();
-  const defaultCount = getDefaultCount();
   const allYearValue = "all-year";
   const [selected, setSelect] = useState(allYearValue);
   const isSelectAllYear = getIsSelectAllYear(selected, allYearValue);
+  const defaultCount = getDefaultCount();
 
   return (
     <div className="area-milestone-window">
@@ -394,5 +394,3 @@ function getConts() {
     },
   ];
 }
-
-export default Milestone;

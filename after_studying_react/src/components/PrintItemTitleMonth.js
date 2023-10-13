@@ -1,13 +1,9 @@
 import "./Css/PrintItemTitleMonth.css";
 
-function PrintItemTitleMonth(props) {
-  const { month } = props;
-
+export default function PrintItemTitleMonth({ month }) {
   return (
     <div className="item-title-month">
       <em>{month}</em>
     </div>
   );
 }
-
-export default PrintItemTitleMonth;

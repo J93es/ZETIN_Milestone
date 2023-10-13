@@ -2,8 +2,7 @@ import Info from "./Info.js";
 import PrintItemTitleMonth from "./PrintItemTitleMonth.js";
 import "./Css/Item.css";
 
-function Item(props) {
-  const { item } = props;
+export default function Item({ item }) {
   const infoList = getInfoList(item);
 
   return (
@@ -24,5 +23,3 @@ function getInfoList(item) {
 
   return infoList;
 }
-
-export default Item;

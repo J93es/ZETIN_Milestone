@@ -1,31 +1,35 @@
+import { useEffect, useCallback } from "react";
 import "./Css/MoreBtnCntl.css";
 import { Button } from "react-bootstrap";
 
-const MoreBtnCntl = (props) => {
-  const { expended, onClick } = props;
+export default function MoreBtnCntl({ expended, setExpended, isHide }) {
+  const handleExpended = useCallback(
+    (e) => {
+      if (typeof setExpended === "function") {
+        setExpended(e);
+      }
+    },
+    [setExpended]
+  );
 
-  const handleClick = (e) => {
-    if (typeof onClick === "function") {
-      onClick(e);
-    }
-  };
+  useEffect(() => {
+    handleExpended(false);
+  }, [isHide, handleExpended]);
 
-  if (expended) {
-    return getMoreBtn("숨기기", handleClick);
+  if (isHide) {
+    return [];
   }
 
-  return getMoreBtn("더보기", handleClick);
-};
-
-function getMoreBtn(status, handleClick) {
-  return (
-    <div className="wrap-item">
-      <div />
-      <Button type="button" className="btn btn-info" onClick={handleClick}>
-        <span className="btn-title">{status}</span>
-      </Button>
-    </div>
-  );
+  if (expended) {
+    return getMoreBtn("숨기기", () => handleExpended(!expended));
+  }
+  return getMoreBtn("더보기", () => handleExpended(!expended));
 }
 
-export default MoreBtnCntl;
+function getMoreBtn(moreBtnText, changeExpended) {
+  return (
+    <Button type="button" className="btn btn-info" onClick={changeExpended}>
+      <span className="more-btn-text">{moreBtnText}</span>
+    </Button>
+  );
+}

@@ -2,9 +2,7 @@ import PrintInfoTitle from "./PrintInfoTitle.js";
 import PrintInfoText from "./PrintInfoText.js";
 import "./Css/Info.css";
 
-function Info(props) {
-  const { info } = props;
-
+export default function Info({ info }) {
   return (
     <div className="wrap-info">
       <PrintInfoTitle info={info} />
@@ -12,5 +10,3 @@ function Info(props) {
     </div>
   );
 }
-
-export default Info;

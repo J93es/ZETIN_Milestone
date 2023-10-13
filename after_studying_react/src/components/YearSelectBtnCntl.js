@@ -1,9 +1,12 @@
 import "./Css/YearSelectBtnCntl.css";
 import { FormSelect } from "react-bootstrap";
 
-function YearSelectBtnCntl(props) {
-  const { conts, onChange, allYearValue, value } = props;
-
+export default function YearSelectBtnCntl({
+  conts,
+  onChange,
+  allYearValue,
+  value,
+}) {
   const handleSelect = (e) => {
     if (typeof onChange === "function") {
       onChange(e.target.value);
@@ -21,14 +24,14 @@ function YearSelectBtnCntl(props) {
 
 function getYearOptList(conts, allYearValue) {
   const yearOptList = [
-    <option value={allYearValue} key={0}>
+    <option value={allYearValue} key={-1}>
       모든 연도
     </option>,
   ];
 
   for (let i = 0; i < conts.length; i++) {
     yearOptList.push(
-      <option value={conts[i].year} key={i + 1}>
+      <option value={conts[i].year} key={i}>
         {conts[i].year}
       </option>
     );
@@ -36,5 +39,3 @@ function getYearOptList(conts, allYearValue) {
 
   return yearOptList;
 }
-
-export default YearSelectBtnCntl;

@@ -1,26 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Item from "./Item.js";
 import MoreBtnCntl from "./MoreBtnCntl.js";
 import PrintContTitleYear from "./PrintContTitleYear.js";
 import "./Css/Cont.css";
 
-function Cont(props) {
-  const { cont, defaultCount, isSelectAllYear } = props;
+export default function Cont({ cont, defaultCount, isSelectAllYear }) {
   const [expended, setExpended] = useState(false);
-
   const itemList = getItemList(expended, isSelectAllYear, defaultCount, cont);
-
-  const moreBtn = getMoreBtn(
+  const isMoreBtnHide = getIsMoreBtnHide(
     isSelectAllYear,
-    expended,
     defaultCount,
-    cont.items.length,
-    setExpended
+    cont.items.length
   );
-
-  useEffect(() => {
-    setExpended(false);
-  }, [isSelectAllYear]);
 
   return (
     <ul>
@@ -30,7 +21,11 @@ function Cont(props) {
         <div className="area-item">
           {itemList}
 
-          {moreBtn}
+          <MoreBtnCntl
+            expended={expended}
+            setExpended={setExpended}
+            isHide={isMoreBtnHide}
+          />
         </div>
       </div>
     </ul>
@@ -39,7 +34,6 @@ function Cont(props) {
 
 function getItemList(expended, isSelectAllYear, defaultCount, cont) {
   const itemList = [];
-
   const showLen = getShowLen(
     expended,
     isSelectAllYear,
@@ -58,36 +52,23 @@ function getShowLen(expended, isSelectAllYear, defaultCount, itemsLength) {
   if (!isSelectAllYear) {
     return itemsLength;
   }
-  if (expended) {
+  if (defaultCount >= itemsLength) {
     return itemsLength;
   }
-  if (defaultCount > itemsLength) {
+  if (expended) {
     return itemsLength;
   }
 
   return defaultCount;
 }
 
-function getMoreBtn(
-  isSelectAllYear,
-  expended,
-  defaultCount,
-  itemsLength,
-  handleExpended
-) {
+function getIsMoreBtnHide(isSelectAllYear, defaultCount, itemsLength) {
   if (!isSelectAllYear) {
-    return [];
+    return true;
   }
   if (defaultCount >= itemsLength) {
-    return [];
+    return true;
   }
 
-  return (
-    <MoreBtnCntl
-      expended={expended}
-      onClick={() => handleExpended(!expended)}
-    />
-  );
+  return false;
 }
-
-export default Cont;
