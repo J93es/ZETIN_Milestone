@@ -1,7 +1,0 @@
-.wrap-item {
-  margin-bottom: 40px;
-  @media (min-width: 850px) {
-    display: grid;
-    grid-template-columns: 60px 1fr;
-  }
-}

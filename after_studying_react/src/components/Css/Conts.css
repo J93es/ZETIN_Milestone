@@ -1,0 +1,15 @@
+@media (min-width: 870px) {
+  .wrap-cont {
+    margin-bottom: 100px;
+    margin-right: 30px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    max-width: 1020px;
+  }
+}
+@media (max-width: 870px) {
+  .wrap-cont {
+    margin-bottom: 100px;
+    margin-right: 30px;
+  }
+}

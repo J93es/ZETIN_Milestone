@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MilestoneWindow from "./MilestoneWindow.js";
+import Conts from "./Conts.js";
 import YearSelectBtnCntl from "./YearSelectBtnCntl.js";
 import "./Css/Milestone.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -12,7 +12,7 @@ export default function Milestone(props) {
   const defaultCount = getDefaultCount();
 
   return (
-    <div className="area-milestone-window">
+    <div className="area-milestone">
       <YearSelectBtnCntl
         conts={conts}
         onChange={setSelect}
@@ -20,11 +20,11 @@ export default function Milestone(props) {
         value={selected}
       />
 
-      <MilestoneWindow
-        conts={conts}
+      <Conts
         selected={selected}
-        isSelectAllYear={isSelectAllYear}
+        conts={conts}
         defaultCount={defaultCount}
+        isSelectAllYear={isSelectAllYear}
       />
     </div>
   );
@@ -35,7 +35,7 @@ function getDefaultCount() {
 }
 
 function getIsSelectAllYear(selected, allYearValue) {
-  if (selected === allYearValue) {
+  if (String(selected) === String(allYearValue)) {
     return true;
   }
   return false;

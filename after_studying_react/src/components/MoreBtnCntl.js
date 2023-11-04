@@ -17,7 +17,7 @@ export default function MoreBtnCntl({ expended, setExpended, isHide }) {
   }, [isHide, handleExpended]);
 
   if (isHide) {
-    return [];
+    return <></>;
   }
 
   if (expended) {
@@ -28,7 +28,7 @@ export default function MoreBtnCntl({ expended, setExpended, isHide }) {
 
 function getMoreBtn(moreBtnText, changeExpended) {
   return (
-    <Button type="button" className="btn btn-info" onClick={changeExpended}>
+    <Button type="button" className="btn btn-dark" onClick={changeExpended}>
       <span className="more-btn-text">{moreBtnText}</span>
     </Button>
   );
