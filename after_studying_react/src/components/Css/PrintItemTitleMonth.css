@@ -1,6 +1,7 @@
 .item-title-month {
-  font-weight: 700;
-  font-size: 21px;
+  word-wrap: break-word;
+  font-weight: 650;
+  font-size: 18px;
   letter-spacing: 0.2px;
-  margin-bottom: 7px;
+  padding: 5px 10px 8px 0.1px;
 }

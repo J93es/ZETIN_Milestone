@@ -15,7 +15,7 @@ export default function Conts({
     defaultCount
   );
 
-  return <div className="area-conts">{contsList}</div>;
+  return <ul className="area-conts">{contsList}</ul>;
 }
 
 function getContsList(conts, selected, isSelectAllYear, defaultCount) {
@@ -24,7 +24,7 @@ function getContsList(conts, selected, isSelectAllYear, defaultCount) {
   for (let i = 0; i < conts.length; i++) {
     if (isContMustShow(conts[i], selected, isSelectAllYear)) {
       contsList.push(
-        <ul key={i}>
+        <li key={i}>
           <div className="wrap-cont">
             <PrintContTitleYear year={conts[i].year} />
             <Items
@@ -33,7 +33,7 @@ function getContsList(conts, selected, isSelectAllYear, defaultCount) {
               isSelectAllYear={isSelectAllYear}
             />
           </div>
-        </ul>
+        </li>
       );
     }
   }

@@ -1,12 +1,12 @@
-@media (min-width: 870px) {
+@media (min-width: 740.1px) {
   .wrap-item {
-    margin-bottom: 40px;
+    padding-bottom: 30px;
     display: grid;
-    grid-template-columns: 70px 1fr;
+    grid-template-columns: 60px 1fr;
   }
 }
-@media (max-width: 870px) {
+@media (max-width: 740px) {
   .wrap-item {
-    margin-bottom: 40px;
+    padding-bottom: 30px;
   }
 }

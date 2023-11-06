@@ -1,19 +1,23 @@
-@media (min-width: 680px) {
+@media (min-width: 580.5px) {
   .wrap-info {
+    padding: 6px;
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 280px 1fr;
   }
   .area-infoes {
     border: 3px solid black;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
   }
 }
-@media (max-width: 680px) {
+@media (max-width: 580px) {
+  .wrap-info {
+    padding: 5px;
+  }
   .area-infoes {
     border: 4px solid black;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     max-width: 400px;
   }
 }

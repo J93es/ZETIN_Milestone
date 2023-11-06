@@ -1,21 +1,21 @@
-@media (max-width: 680px) {
+@media (min-width: 580.5px) {
   .area-info-text {
-    margin: 10px 10px 10px 14px;
+    padding: 2px 2px 2px 0px;
   }
   .info-text {
     word-wrap: break-word;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 550;
-    padding: 10px;
+    padding: 7px 0.1px 7px 14px;
   }
 }
-@media (min-width: 680px) {
+@media (max-width: 580px) {
   .area-info-text {
-    margin: 10px 10px 10px 1px;
+    padding: 5px 0px 5px 10px;
   }
   .info-text {
     word-wrap: break-word;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 550;
     padding: 10px;
   }
