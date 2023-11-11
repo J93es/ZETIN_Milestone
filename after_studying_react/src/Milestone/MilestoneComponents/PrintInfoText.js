@@ -10,6 +10,7 @@ function getInfoTextList(info) {
   if (info.texts.length === 0) {
     return getInfoText("", -1);
   }
+
   const infoTextList = [];
 
   for (let i = 0; i < info.texts.length; i++) {

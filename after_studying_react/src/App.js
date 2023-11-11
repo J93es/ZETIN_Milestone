@@ -1,4 +1,4 @@
-import Milestone from "./Components/Milestone.js";
+import Milestone from "./Milestone/Milestone.js";
 
 function App(props) {
   return <Milestone />;
