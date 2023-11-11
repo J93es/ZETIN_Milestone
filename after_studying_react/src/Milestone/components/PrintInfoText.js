@@ -1,4 +1,4 @@
-import "./Css/PrintInfoText.css";
+import "../styles/css/PrintInfoText.css";
 
 export default function PrintPrintInfoText({ info }) {
   const infoTextList = getInfoTextList(info);

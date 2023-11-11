@@ -1,0 +1,9 @@
+#yearSelectBtn {
+  background-color: rgb(242, 242, 242);
+  width: 6.875rem;
+  height: 2.5rem;
+  margin-bottom: 3.125rem;
+  font-size: 0.9375rem;
+  font-family: "NanumBarunGothicBold";
+  border: 0.0938rem solid black;
+}

@@ -1,4 +1,4 @@
-import "./Css/PrintInfoTitle.css";
+import "../styles/css/PrintInfoTitle.css";
 
 export default function PrintInfoTitle({ info }) {
   const infoTitleList = getInfoTitleList(info);

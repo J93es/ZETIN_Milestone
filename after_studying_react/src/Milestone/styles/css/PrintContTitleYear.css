@@ -1,0 +1,14 @@
+@media (min-width: 45.0063rem) {
+  .cont-title-year {
+    word-wrap: break-word;
+    font-size: 1.125rem;
+    padding: 0.1875rem 0.0063rem 0.0063rem 0.0063rem;
+  }
+}
+@media (max-width: 45rem) {
+  .cont-title-year {
+    word-wrap: break-word;
+    font-size: 1.125rem;
+    padding: 0.0063rem 0.0063rem 1.25rem 0.0063rem;
+  }
+}

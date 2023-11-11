@@ -1,6 +1,6 @@
 import PrintInfoTitle from "./PrintInfoTitle.js";
 import PrintInfoText from "./PrintInfoText.js";
-import "./Css/Infoes.css";
+import "../styles/css/Infoes.css";
 
 export default function Infoes({ infoes }) {
   const infoesList = getInfoesList(infoes);

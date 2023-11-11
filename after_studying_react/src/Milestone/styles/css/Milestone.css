@@ -1,0 +1,9 @@
+.area-milestone {
+  max-width: 49.75rem;
+  padding-right: 1.5rem;
+  font-family: BMHANNAPro, BMHANNAAir, NanumBarunGothicBold, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}

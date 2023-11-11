@@ -1,0 +1,23 @@
+@media (min-width: 36.2813rem) {
+  .wrap-info {
+    padding: 0.375rem;
+    display: grid;
+    grid-template-columns: 18.75rem 1fr;
+  }
+  .area-infoes {
+    border: 0.1875rem solid black;
+    border-radius: 0.625rem;
+    padding: 0.3125rem;
+  }
+}
+@media (max-width: 36.25rem) {
+  .wrap-info {
+    padding: 0.3125rem;
+  }
+  .area-infoes {
+    border: 0.1875rem solid black;
+    border-radius: 0.625rem;
+    padding: 0.3125rem;
+    max-width: 25rem;
+  }
+}

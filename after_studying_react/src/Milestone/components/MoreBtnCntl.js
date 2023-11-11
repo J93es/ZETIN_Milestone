@@ -1,5 +1,5 @@
 import { useEffect, useCallback } from "react";
-import "./Css/MoreBtnCntl.css";
+import "../styles/css/MoreBtnCntl.css";
 import { Button } from "react-bootstrap";
 
 export default function MoreBtnCntl({ expended, setExpended, isHide }) {

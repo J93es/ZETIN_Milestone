@@ -1,4 +1,4 @@
-import "./Css/PrintContTitleYear.css";
+import "../styles/css/PrintContTitleYear.css";
 
 export default function PrintContTitleYear({ year }) {
   return (

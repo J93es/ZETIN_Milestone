@@ -1,6 +1,6 @@
 import Items from "./Items.js";
 import PrintContTitleYear from "./PrintContTitleYear.js";
-import "./Css/Conts.css";
+import "../styles/css/Conts.css";
 
 export default function Conts({
   conts,

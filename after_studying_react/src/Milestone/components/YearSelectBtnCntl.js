@@ -1,4 +1,4 @@
-import "./Css/YearSelectBtnCntl.css";
+import "../styles/css/YearSelectBtnCntl.css";
 import { FormSelect } from "react-bootstrap";
 
 export default function YearSelectBtnCntl({
