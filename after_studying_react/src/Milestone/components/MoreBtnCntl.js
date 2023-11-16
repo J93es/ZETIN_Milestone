@@ -26,9 +26,9 @@ export default function MoreBtnCntl({ expended, setExpended, isHide }) {
   return getMoreBtn("더보기", () => handleExpended(!expended));
 }
 
-function getMoreBtn(moreBtnText, changeExpended) {
+function getMoreBtn(moreBtnText, handleExpended) {
   return (
-    <Button type="button" className="btn btn-dark" onClick={changeExpended}>
+    <Button type="button" className="btn btn-dark" onClick={handleExpended}>
       <span className="more-btn-text">{moreBtnText}</span>
     </Button>
   );

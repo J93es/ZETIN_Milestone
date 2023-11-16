@@ -1,19 +1,14 @@
 .info-text {
   word-wrap: break-word;
-  font-size: 0.75rem;
-  padding: 0.375rem 0.75rem 0.375rem 0.75rem;
-  font-family: "BMHANNAAir";
-  font-weight: 600;
+  font-size: 0.8125rem;
+  padding: 0.5938rem 0.8125rem 0.5938rem 0.8125rem;
 }
-@media (min-width: 36.2813rem) {
+@media (min-width: 25.0313rem) {
   .area-info-text {
-    padding: 0.125rem 0rem 0.125rem 0rem;
-  }
-  .wrap-info-text {
-    padding: 0.25rem 0rem 0.25rem 0rem;
+    padding: 0.125rem;
   }
 }
-@media (max-width: 36.25rem) {
+@media (max-width: 25rem) {
   .area-info-text {
     padding: 0.3125rem 0rem 0.3125rem 0.625rem;
   }

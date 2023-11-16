@@ -1,4 +1,3 @@
-import milestoneData from "./data/milestoneData.json";
 import { useState } from "react";
 import Conts from "./components/Conts.js";
 import YearSelectBtnCntl from "./components/YearSelectBtnCntl.js";
@@ -7,11 +6,11 @@ import "./styles/css/Milestone.css";
 import "./styles/css/fonts.css";
 
 export default function Milestone(props) {
-  const conts = milestoneData;
+  const { defaultCount, dataFileNames, dataPath } = getIndexData();
+  const conts = getConts(dataFileNames, dataPath);
   const allYearValue = "all-year";
   const [selected, setSelect] = useState(allYearValue);
   const isSelectAllYear = getIsSelectAllYear(selected, allYearValue);
-  const defaultCount = getDefaultCount();
 
   return (
     <div className="area-milestone">
@@ -32,8 +31,16 @@ export default function Milestone(props) {
   );
 }
 
-function getDefaultCount() {
-  return 2;
+function getIndexData() {
+  return require("./data/index.json");
+}
+
+function getConts(dataFileNames, dataPath) {
+  const conts = dataFileNames.map((fileName) => {
+    return require("./data/" + fileName);
+  });
+
+  return conts;
 }
 
 function getIsSelectAllYear(selected, allYearValue) {

@@ -1,16 +1,9 @@
 @font-face {
-  font-family: "NanumBarunGothicBold";
-  src: url("../fonts/NanumBarunGothicBold.otf") format("truetype");
+  font-family: "NanumGothicBold";
+  src: url("../fonts/NanumGothicBold.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "BMHANNAPro";
-  src: url("../fonts/BMHANNAPro.otf") format("truetype");
-  unicode-range: U+0020-007E, U+AC00-D7A3;
-}
-
-@font-face {
-  font-family: "BMHANNAAir";
-  src: url("../fonts/BMHANNAAir.otf") format("truetype");
-  unicode-range: U+0020-007E, U+AC00-D7A3;
+  font-family: "NanumGothicExtraBold";
+  src: url("../fonts/NanumGothicExtraBold.otf") format("truetype");
 }

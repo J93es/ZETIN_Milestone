@@ -1,6 +1,9 @@
+.btn-dark {
+  margin: 1.875rem 0rem 0rem 0rem;
+}
+
 .more-btn-text {
-  font-size: 0.9375rem;
-  letter-spacing: 0.0187rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.0125rem;
   color: white;
-  font-family: "NanumBarunGothicBold";
 }

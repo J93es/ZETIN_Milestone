@@ -1,15 +1,17 @@
-@media (min-width: 45.0063rem) {
+@media (min-width: 37.5063rem) {
   .wrap-item {
-    padding-bottom: 1.875rem;
     display: grid;
     grid-template-columns: 3.75rem 1fr;
   }
+  .wrap-item:not(:last-of-type) {
+    padding-bottom: 1.875rem;
+  }
 }
-@media (max-width: 45rem) {
+@media (max-width: 37.5rem) {
   .area-items {
     padding-left: 0.9375rem;
   }
-  .wrap-item {
+  .wrap-item:not(:last-of-type) {
     padding-bottom: 1.875rem;
   }
 }
