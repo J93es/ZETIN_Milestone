@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import "../styles/css/YearSelectBtnCntl.css";
 import { FormSelect } from "react-bootstrap";
 
@@ -7,11 +8,14 @@ export default function YearSelectBtnCntl({
   allYearValue,
   value,
 }) {
-  const handleSelect = (e) => {
-    if (typeof onChange === "function") {
-      onChange(e.target.value);
-    }
-  };
+  const handleSelect = useCallback(
+    (e) => {
+      if (typeof onChange === "function") {
+        onChange(e.target.value);
+      }
+    },
+    [onChange]
+  );
 
   const yearOptList = getYearOptList(conts, allYearValue);
 
