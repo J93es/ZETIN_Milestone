@@ -1,0 +1,12 @@
+{
+  "name": "zetin-milestone-dev",
+  "image": "node:18",
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      "settings": {},
+      "extensions": []
+    }
+  },
+  "postCreateCommand": "npm install"
+}
