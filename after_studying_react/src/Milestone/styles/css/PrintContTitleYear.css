@@ -1,16 +1,16 @@
-@media (min-width: 37.5063rem) {
+@media (min-width: 600.1008px) {
   .cont-title-year {
     word-wrap: break-word;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-family: "NanumGothicExtraBold";
-    padding: 0.0063rem;
+    padding: 19px 0.1008px 0.1008px 0.0063rem;
   }
 }
-@media (max-width: 37.5rem) {
+@media (max-width: 600px) {
   .cont-title-year {
     word-wrap: break-word;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-family: "NanumGothicExtraBold";
-    padding: 0.0063rem 0.0063rem 1rem 0.0063rem;
+    padding: 0.1008px 0.1008px 16px 0.1008px;
   }
 }
