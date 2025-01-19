@@ -5,7 +5,7 @@ import "./styles/css/Milestone.css";
 import "./styles/css/fonts.css";
 
 export default function Milestone(props) {
-  const { defaultCount, dataFileNames } = useMemo(() => {
+  const { dataFileNames } = useMemo(() => {
     return getMilestoneData();
   }, []);
 
@@ -29,7 +29,6 @@ export default function Milestone(props) {
       <Conts
         selected={selected}
         conts={conts}
-        defaultCount={defaultCount}
         isSelectAllYear={isSelectAllYear}
       />
     </div>

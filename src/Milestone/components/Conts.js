@@ -2,23 +2,13 @@ import Items from "./Items.js";
 import PrintContTitleYear from "./PrintContTitleYear.js";
 import "../styles/css/Conts.css";
 
-export default function Conts({
-  conts,
-  selected,
-  isSelectAllYear,
-  defaultCount,
-}) {
-  const contsList = getContsList(
-    conts,
-    selected,
-    isSelectAllYear,
-    defaultCount
-  );
+export default function Conts({ conts, selected, isSelectAllYear }) {
+  const contsList = getContsList(conts, selected, isSelectAllYear);
 
   return <ul className="area-conts">{contsList}</ul>;
 }
 
-function getContsList(conts, selected, isSelectAllYear, defaultCount) {
+function getContsList(conts, selected, isSelectAllYear) {
   const contsList = [];
 
   for (let i = 0; i < conts.length; i++) {
@@ -27,11 +17,7 @@ function getContsList(conts, selected, isSelectAllYear, defaultCount) {
         <li key={i}>
           <div className="wrap-cont">
             <PrintContTitleYear year={conts[i].year} />
-            <Items
-              items={conts[i].items}
-              defaultCount={defaultCount}
-              isSelectAllYear={isSelectAllYear}
-            />
+            <Items items={conts[i].items} />
           </div>
         </li>
       );
