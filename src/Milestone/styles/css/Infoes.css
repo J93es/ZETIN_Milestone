@@ -10,6 +10,7 @@
     border: 0.1875rem solid black;
     border-radius: 0.625rem;
     padding: 0.625rem;
+    word-break: break-all;
   }
 }
 @media (max-width: 25rem) {
@@ -20,5 +21,6 @@
     border: 0.1875rem solid black;
     border-radius: 0.625rem;
     padding: 0.625rem;
+    word-break: break-all;
   }
 }

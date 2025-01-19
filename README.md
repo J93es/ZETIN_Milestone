@@ -1,6 +1,54 @@
-# Getting Started with Create React App
+# ZETIN Milestone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[ZETIN 연혁 페이지](https://zetin.uos.ac.kr/index.php?mid=history) 입니다.
+
+![ZETIN 연혁 페이지 이미지](./asset/ZETIN-milestone.png)
+
+## 새로운 연도 정보 추가하기
+
+### 1. 본 레포지토리의 ./src/Milestone/data 로 이동
+
+### 2. {원하는 연도}.json 파일을 추가
+
+- 형식은 다음과 같으며, 원하는 월/행사 등을 추가해서 사용하면 됩니다.
+
+```json
+{
+  "year": "20NN년",
+  "items": [
+    {
+      "month": "1월",
+      "infoes": [
+        {
+          "titles": ["행사1"],
+          "texts": ["행사 내용1", "행사 내용2"]
+        },
+        {
+          "titles": ["행사2"],
+          "texts": []
+        }
+      ]
+    },
+    {
+      "month": "2월",
+      "infoes": [
+        {
+          "titles": ["행사1"],
+          "texts": ["행사 내용1", "행사 내용2"]
+        }
+      ]
+    }
+  ]
+}
+```
+
+### 3. index.json 수정
+
+- dataFileNames 리스트에 "{원하는 연도}.json" 추가
+
+### 4. 파일 추가 후, 정상작동하는지 테스트
+
+- npm start로 작동 테스트
 
 ## Available Scripts
 
@@ -14,11 +62,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -28,43 +71,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

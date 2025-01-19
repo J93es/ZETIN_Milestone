@@ -142,8 +142,81 @@
       "month": "11월",
       "infoes": [
         {
-          "titles": ["창립제 및 자체대회 (11/18)"],
-          "texts": []
+          "titles": ["창립제 및 자체대회 (11/16)"],
+          "texts": [
+            "ZETIN 31주년을 축하하는 창립제를 개최",
+            "",
+            "자체대회 순위",
+            "- 1위: 정민석",
+            "- 2위: 박소연",
+            "- 3위: 김명준"
+          ]
+        },
+        {
+          "titles": [
+            "임베디드 소프트웨어 경진대회 자율주행 레이싱 부문(11/16)"
+          ],
+          "texts": [
+            "ZETIN 1팀 참가",
+            "",
+            "참가자",
+            "- 신현지(전자전기컴퓨터 `21), 팀장",
+            "- 표기환(전자전기컴퓨터 `19)",
+            "- 송규현(전자전기컴퓨터 `20)",
+            "- 이규호(전자전기컴퓨터 `23)",
+            "- 이현제(전자전기컴퓨터 `20)",
+            "",
+            "수상내역: 입선"
+          ]
+        },
+        {
+          "titles": ["대한전자공학회 IT 창의 챌린지(11/22)"],
+          "texts": [
+            "ZETIN 2팀 참가",
+            "",
+            "참가자",
+            "- 정형원(전자전기컴퓨터 `20), 팀장",
+            "- 김창억(전자전기컴퓨터 `20)",
+            "- 윤주한(전자전기컴퓨터 `20)",
+            "수상내역: 은상",
+            "",
+            "참가자",
+            "- 김현민(전자전기컴퓨터 `20)",
+            "- 송규현(전자전기컴퓨터 `20)",
+            "- ZETIN 외 1명",
+            "수상내역: 케이던스상"
+          ]
+        },
+        {
+          "titles": ["공학페스티벌 창의적종합설계경진대회(11/22)"],
+          "texts": [
+            "ZETIN 1팀 참가",
+            "",
+            "참가자",
+            "- 김도협(기계정보공학 `22), 팀장",
+            "- 정민석(국어국문학 `20)",
+            "- 정형원(전자전기컴퓨터 `20)",
+            "- ZETIN 외 2명",
+            "",
+            "수상내역",
+            "- 교내대회(9.12), 2위(총장상)",
+            "- 전국대회 예선(11.7), 1위(공학교육혁신센터장상)",
+            "- 전국대회 본선(11.15), 산업통상자원부장관상 수상",
+            "- 시상식(11/22), https://www.youtube.com/live/IR_xTpdJgs8?feature=shared",
+            "",
+            "보도자료",
+            "- 조선일보: https://lifenlearning.chosun.com/pan/site/data/html_dir/2024/11/25/2024112501899.html",
+            "- 중앙일보: https://v.daum.net/v/20241126112535152",
+            "- 동아일보: https://www.donga.com/news/Economy/article/all/20241126/130509067/2",
+            "- 한겨레: https://www.hani.co.kr/arti/economy/biznews/1169091.html",
+            "- 뉴스 원: https://www.news1.kr/society/education/5610757",
+            "- 뉴시스: https://www.newsis.com/view/NISX20241126_0002973337",
+            "- 뉴데일리 경제: https://biz.newdaily.co.kr/site/data/html/2024/11/25/2024112500342.html",
+            "- 베리타스 알파: https://www.veritas-a.com/news/articleView.html?idxno=531519",
+            "- 이뉴스투데이: http://www.enewstoday.co.kr/news/articleView.html?idxno=2204586",
+            "- 서울신문: https://www.seoul.co.kr/news/society/education-news/2024/11/29/20241129500047",
+            "- 대학 저널: https://dhnews.co.kr/news/view/1065598961974404"
+          ]
         }
       ]
     }
